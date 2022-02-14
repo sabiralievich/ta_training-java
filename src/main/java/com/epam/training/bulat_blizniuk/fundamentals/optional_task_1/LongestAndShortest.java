@@ -2,10 +2,15 @@ package com.epam.training.bulat_blizniuk.fundamentals.optional_task_1;
 
 import com.epam.training.bulat_blizniuk.fundamentals.main_task.MainTask;
 
+//   1.     Найти самое короткое и самое длинное число. Вывести найденные числа и их длину.
+
 public class LongestAndShortest extends MainTask {
 
     public static void main(String[] args) {
-        System.out.println("Task #1. The longest and the shortest numbers:");
+        System.out.println(
+                "Task #1. The longest and the shortest numbers:" +
+                        "\nType numbers separated by SPACE and then press ENTER:"
+        );
         setArgumentsFromCL();
         getLongestString(getArgumentFromCL());
         getShortestString(getArgumentFromCL());

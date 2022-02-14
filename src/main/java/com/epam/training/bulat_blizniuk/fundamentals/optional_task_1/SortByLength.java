@@ -2,9 +2,13 @@ package com.epam.training.bulat_blizniuk.fundamentals.optional_task_1;
 
 import com.epam.training.bulat_blizniuk.fundamentals.main_task.MainTask;
 
+//        2.     Вывести числа в порядке возрастания (убывания) значений их длины.
+
 public class SortByLength extends MainTask {
     public static void main(String[] args) {
-        System.out.println("Task #2. Numbers are sorted by their length:");
+        System.out.println("Task #2. Numbers are sorted by their length:" +
+                "\nType numbers separated by SPACE and then press ENTER:"
+        );
         setArgumentsFromCL();
         sortNumbersByLength(getArgumentFromCL());
     }
@@ -22,11 +26,11 @@ public class SortByLength extends MainTask {
             }
         }
         System.out.println("Ascending order:");
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.print(numbers[i] + " ");
+        for (String number : numbers) {
+            System.out.print(number + " ");
         }
-        System.out.println("");
-        System.out.println("Descending order:");
+
+        System.out.println("\nDescending order:");
         for (int i = numbers.length - 1; i >= 0; i--) {
             System.out.print(numbers[i] + " ");
         }
