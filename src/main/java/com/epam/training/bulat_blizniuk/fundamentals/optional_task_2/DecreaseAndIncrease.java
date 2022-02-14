@@ -23,32 +23,32 @@ public class DecreaseAndIncrease extends OptionalTask2{
             }
         }
         for (int i = 0; i < byRow.length - 1; i++){
-            if(byRow[i] < byRow[i+1]) {//если последующий элемент больше
+            if(byRow[i] < byRow[i+1]) {
                 r += 1;
                 if(r > max){
                     max = r;
                     h = i + 1;
-                }//запоминаем количество возрастаний и индекс последнего возрастающего элем
+                }
             } else {
                 r = 0;
-            }//возрастание прервалась
+            }
             if(byRow[i] > byRow[i+1]){
                 m += 1;
                 if(m > min){
                     min = m;
                     h1 = i + 1;
-                }//запоминаем количество возрастаний и индекс последнего убыв элем
+                }
             } else{
                 m = 0;
-            }// убывание прервалась
+            }
         }
-        System.out.println("Максимальная последовательность возрастающих чисел:");
+        System.out.println("Maximum ascending sequence: ");
         int[] l = new int[max+1];
-        System.arraycopy(byRow,(h - max), l,0,(max + 1));//копирую последовательность возр элем в новый массив
-        System.out.println(Arrays.toString(l) + " " + (max + 1));
-        System.out.println("Максимальная последовательность убывающих чисел:");
+        System.arraycopy(byRow,(h - max), l,0,(max + 1));
+        System.out.println(Arrays.toString(l) + " " + (max + 1) + " numbers");
+        System.out.println("Maximum descending sequence: ");
         int[] t = new int[min+1];
-        System.arraycopy(byRow, (h1 - min), t,0,(min + 1));//копирую последовательность убыв элем в новый массив
-        System.out.println(Arrays.toString(t) + " " + (min + 1));
+        System.arraycopy(byRow, (h1 - min), t,0,(min + 1) );
+        System.out.println(Arrays.toString(t) + " " + (min + 1)+ " numbers");
     }
 }
